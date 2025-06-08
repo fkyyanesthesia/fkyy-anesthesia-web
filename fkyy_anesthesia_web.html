@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>胸外科麻醉术前评估系统</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fb;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 10px;
+      background-color: #003366;
+      color: white;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>胸外科麻醉术前评估系统（Fkyy）</h1>
+  </header>
+  <div class="container">
+    <form>
+      <label for="name">患者姓名 / Patient Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="id">住院号 / Hospital ID</label>
+      <input type="text" id="id" name="id" required />
+
+      <label for="surgery">拟行手术类型 / Planned Surgery Type</label>
+      <input type="text" id="surgery" name="surgery" />
+
+      <label for="history">既往是否有困难插管史 / History of Difficult Intubation</label>
+      <select id="history" name="history">
+        <option value="unknown">未知 / Unknown</option>
+        <option value="yes">是 / Yes</option>
+        <option value="no">否 / No</option>
+      </select>
+
+      <label for="airway">气道相关风险因素勾选 / Airway Risk Factors</label>
+      <textarea id="airway" name="airway" rows="3"></textarea>
+
+      <label for="ct">上传患者胸部CT报告 / Upload Chest CT Report</label>
+      <input type="file" id="ct" name="ct" accept="application/pdf,image/*" />
+
+      <label for="privacy">
+        <input type="checkbox" id="privacy" name="privacy" required />
+        我已阅读并同意隐私保护与知情同意说明（中英文）<br />
+        I have read and agree to the privacy protection and informed consent statement
+      </label>
+
+      <button type="submit">提交评估 / Submit Assessment</button>
+    </form>
+  </div>
+  <footer>
+    &copy; 2025 上海市肺科医院 Shanghai Pulmonary Hospital. All rights reserved.
+  </footer>
+</body>
+</html>
