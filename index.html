@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>胸外科麻醉评估系统</title>
+</head>
+<body>
+  <h1>胸外科麻醉术前评估表（Fkyy）</h1>
+  <form>
+    <label>姓名 / Name: <input type="text" name="name" required /></label><br/>
+    <label>住院号 / Patient ID: <input type="text" name="patient_id" required /></label><br/>
+    <label>手术类型 / Surgery Type:
+      <select name="surgery">
+        <option value="lobectomy">肺叶切除术</option>
+        <option value="segmentectomy">肺段切除术</option>
+        <option value="wedge">楔形切除术</option>
+        <option value="esophagectomy">食管切除术</option>
+      </select>
+    </label><br/>
+    <label>是否有困难插管史 / History of difficult intubation:
+      <input type="radio" name="difficult_intubation" value="yes" /> 是
+      <input type="radio" name="difficult_intubation" value="no" /> 否
+    </label><br/>
+    <label>上传CT报告 / Upload CT Report: <input type="file" name="ct_report" /></label><br/>
+    <label><input type="checkbox" required /> 我已阅读并同意隐私保护和知情同意说明 / I have read and agree to the privacy policy.</label><br/>
+    <button type="submit">提交 / Submit</button>
+  </form>
+</body>
+</html>
